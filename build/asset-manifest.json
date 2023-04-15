@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2b95e534.css",
+    "main.js": "/static/js/main.7639a5bc.js",
+    "static/media/three.png": "/static/media/three.bf35a0316315501c2731.png",
+    "static/media/weather.png": "/static/media/weather.3c583108c2d22928e7e9.png",
+    "static/media/bkinctube.png": "/static/media/bkinctube.dd5095e66bf7923c0923.png",
+    "static/media/beats.png": "/static/media/beats.f7eef15790a99428c81f.png",
+    "static/media/BKTube.png": "/static/media/BKTube.cee7174b887d794de884.png",
+    "static/media/Woodmere.png": "/static/media/Woodmere.a136405943265c2ab7a5.png",
+    "static/media/ModernApp.png": "/static/media/ModernApp.6f29f9a205802590883d.png",
+    "static/media/heroImage.png": "/static/media/heroImage.401d7b924d554a3191d3.png",
+    "static/media/Apple.png": "/static/media/Apple.ac81523ff46f56388217.png",
+    "static/media/redux.png": "/static/media/redux.649d3cacbefcef35d6d9.png",
+    "static/media/chatGPT.png": "/static/media/chatGPT.7dd32a7c0a175b5dc8bd.png",
+    "static/media/api.png": "/static/media/api.e5cb4f3c402dd4860708.png",
+    "static/media/node.png": "/static/media/node.d980d9636ace07ad3dde.png",
+    "static/media/react.png": "/static/media/react.0cf951a69d8e58f83f9d.png",
+    "static/media/next.png": "/static/media/next.48ddc8121a0fcb543d64.png",
+    "static/media/html.png": "/static/media/html.2ba4fabc69a89a8f71e6.png",
+    "static/media/tailwind.png": "/static/media/tailwind.e47ac876b8d4d0bba47a.png",
+    "static/media/css.png": "/static/media/css.69a82c2d9e45c933a9cb.png",
+    "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
+    "index.html": "/index.html",
+    "main.2b95e534.css.map": "/static/css/main.2b95e534.css.map",
+    "main.7639a5bc.js.map": "/static/js/main.7639a5bc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b95e534.css",
+    "static/js/main.7639a5bc.js"
+  ]
+}
