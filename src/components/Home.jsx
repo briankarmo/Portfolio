@@ -15,7 +15,7 @@ const Home = () => {
             Front End Software Engineer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            Welcome to my JavaScript portfolio! As a web developer, I have a strong passion for creating dynamic and user-friendly web applications by leveraging the latest technologies and frameworks. My area of expertise lies in the development of full-stack solutions, which involves front-end design, back-end implementation, and database management. I am committed to constantly learning new techniques and tools to enhance my skills and deliver the best possible solutions to my clients. I am thrilled to work on innovative and impactful projects, and I welcome any opportunities to explore how I can contribute. Thank you for taking the time to browse my portfolio!
+            Welcome to my JavaScript portfolio! As a web developer, I have a strong passion for creating dynamic and user-friendly web applications by leveraging the latest technologies and frameworks. My area of expertise lies in the development of full-stack solutions, which involves front-end design, back-end implementation, and database management. I am committed to constantly learning new techniques and tools to enhance my skills and deliver the best possible solutions to clients. I am thrilled to work on innovative and impactful projects, and I welcome any opportunities to explore how I can contribute. Thank you for taking the time to browse my portfolio!
           </p>
 
           <div>
