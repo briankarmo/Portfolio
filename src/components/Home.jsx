@@ -105,27 +105,13 @@ const Home = () => {
                 transition={{ duration: 1, delay: 1.2 }}
                 className="w-full backdrop-blur-sm bg-gray-900/30 p-3 sm:p-4 rounded-2xl"
               >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white whitespace-normal">
-                  <span className="block mb-2 sm:mb-4">Full-Stack</span>
-                  <span className="block text-cyan-400 font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight leading-tight">
-                    Software<br />Engineer
-                  </span>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-signature font-bold bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent whitespace-normal">
+                  Brian Karmo
                 </h1>
+                <h2 className="mt-2 text-xl sm:text-2xl md:text-3xl font-semibold bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent">
+                  Full-Stack Software Engineer
+                </h2>
               </motion.div>
-
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 1.6 }}
-                className="max-w-md text-base sm:text-lg md:text-xl text-gray-100 leading-relaxed backdrop-blur-sm bg-gray-900/30 p-3 sm:p-4 rounded-2xl mx-auto"
-              >
-                Welcome to my <span className="text-cyan-300">full-stack portfolio</span>! 
-                I specialize in building <span className="text-cyan-300">dynamic</span>,{' '}
-                <span className="text-blue-300">interactive</span>, and{' '}
-                <span className="text-cyan-300">user-friendly</span> web applications spanning 
-                both the <span className="text-cyan-300">front-end</span> and{' '}
-                <span className="text-cyan-300">back-end</span>.
-              </motion.p>
             </div>
           </motion.div>
 
@@ -202,7 +188,7 @@ const Home = () => {
               }}
               className="backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl"
             >
-              <h3 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-4">{category.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent mb-4">{category.title}</h3>
               <ul className="space-y-3">
                 {category.items.map((item, itemIndex) => (
                   <motion.li
@@ -217,7 +203,7 @@ const Home = () => {
                     }}
                     className="flex items-center text-gray-200"
                   >
-                    <span className="text-cyan-400 mr-2">•</span>
+                    <span className="mr-2 bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent">•</span>
                     {item}
                   </motion.li>
                 ))}

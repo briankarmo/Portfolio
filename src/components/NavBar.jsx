@@ -52,7 +52,7 @@ const NavBar = () => {
             className="flex flex-col items-start"
           >
             <motion.p 
-              className="text-xs sm:text-sm lg:text-base font-signature text-cyan-400/80"
+              className="text-xs sm:text-sm lg:text-base font-signature bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -60,8 +60,8 @@ const NavBar = () => {
               Full Stack Developer
             </motion.p>
             <motion.h1 
-              className="text-2xl sm:text-3xl lg:text-4xl font-signature font-bold
-                       bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent"
+              className="text-2xl sm:text-3xl lg:text-4xl font-signature bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent"
+              style={{ fontFamily: "'Dancing Script', 'Pacifico', 'font-signature', cursive" }}
             >
               Brian Karmo
             </motion.h1>
@@ -139,7 +139,7 @@ const NavBar = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="text-sm sm:text-base font-signature text-cyan-400/80 mb-2"
+                  className="text-sm sm:text-base font-signature bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent mb-2"
                 >
                   Full Stack Developer
                 </motion.p>
@@ -147,8 +147,8 @@ const NavBar = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-4xl sm:text-5xl font-signature font-bold pt-12 sm:pt-16
-                           bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg"
+                  className="text-4xl sm:text-5xl font-signature bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent pt-12 sm:pt-16"
+                  style={{ fontFamily: "'Dancing Script', 'Pacifico', 'font-signature', cursive" }}
                 >
                   Brian Karmo
                 </motion.h1>
