@@ -3,6 +3,13 @@ import Image from "next/image";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const GradientTech = ({ children }) => (
+  <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-semibold">{children}</span>
+);
+const GradientKeyword = ({ children }) => (
+  <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-white bg-clip-text text-transparent font-semibold">{children}</span>
+);
+
 const categories = {
   frontend: {
     title: "Front-End Technologies",
@@ -143,8 +150,8 @@ const TechCard = ({ src, title, index }) => (
       </div>
     </div>
     <div className="w-full h-[40px] flex items-center justify-center">
-      <p className="text-sm text-gray-100 text-center font-medium group-hover:text-white transition-colors duration-300 line-clamp-2 sm:px-2">
-        {title}
+      <p className="text-sm text-center font-medium group-hover:text-white transition-colors duration-300 line-clamp-2 sm:px-2">
+        <GradientTech>{title}</GradientTech>
       </p>
     </div>
   </div>
@@ -156,8 +163,8 @@ const SubCategory = ({ title, techs, categoryIndex }) => (
     data-aos="fade-up"
     data-aos-delay={100 * categoryIndex}
   >
-    <h3 className="text-lg font-semibold text-white mb-8 text-center">
-      {title}
+    <h3 className="text-lg font-semibold text-center mb-8">
+      <GradientKeyword>{title}</GradientKeyword>
     </h3>
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 place-items-center mx-auto max-w-6xl">
       {techs.map((tech, index) => (
@@ -173,8 +180,8 @@ const Category = ({ title, subcategories, index }) => (
     data-aos="fade-up"
     data-aos-delay={200 * index}
   >
-    <h2 className="text-2xl font-bold text-white mb-10 pb-2 border-b-2 border-cyan-500/50 text-center">
-      {title}
+    <h2 className="text-2xl font-bold mb-10 pb-2 border-b-2 border-cyan-500/50 text-center">
+      <GradientKeyword>{title}</GradientKeyword>
     </h2>
     <div className="space-y-16">
       {Object.values(subcategories).map((subcat, subIndex) => (
@@ -210,15 +217,15 @@ const TechStack = () => {
           className="text-center mb-16 backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl"
           data-aos="fade-down"
         >
-          <h1 className="text-4xl font-bold inline-block text-white border-b-4 border-cyan-500">
-            Tech Stack
+          <h1 className="text-4xl font-bold inline-block border-b-4 border-cyan-500">
+            <GradientTech>Tech Stack</GradientTech>
           </h1>
           <p 
             className="text-gray-100 mt-6"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            A comprehensive overview of the technologies I work with:
+            A <GradientKeyword>comprehensive overview</GradientKeyword> of the <GradientKeyword>technologies</GradientKeyword> I work with:
           </p>
         </div>
 

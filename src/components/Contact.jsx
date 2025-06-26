@@ -2,6 +2,19 @@ import React from "react";
 import { FiMail, FiUser, FiMessageSquare } from "react-icons/fi";
 import MotionWrapper from './MotionWrapper';
 
+// Gradient Components
+const GradientTech = ({ children }) => (
+  <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-medium">
+    {children}
+  </span>
+);
+
+const GradientKeyword = ({ children }) => (
+  <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-white bg-clip-text text-transparent font-medium">
+    {children}
+  </span>
+);
+
 const Contact = () => {
   return (
     <section
@@ -14,16 +27,16 @@ const Contact = () => {
         <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-blue-500/10 to-transparent rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-12 relative">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-12 pb-40 sm:pb-44 md:pb-48 relative">
         {/* Header Section */}
         <MotionWrapper>
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-bold inline-block border-b-4 border-gray-500 pb-2">
-              Let&apos;s Connect
+              <GradientTech>Let&apos;s Connect</GradientTech>
             </h2>
             <p className="text-gray-300 mt-6 max-w-2xl mx-auto text-sm sm:text-base">
-              I&apos;m always interested in hearing about new projects and opportunities. 
-              Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
+              I&apos;m always <GradientKeyword>interested</GradientKeyword> in hearing about <GradientKeyword>new projects</GradientKeyword> and <GradientKeyword>opportunities</GradientKeyword>. 
+              Whether you have a <GradientKeyword>question</GradientKeyword> or just want to say hi, I&apos;ll try my best to get back to you!
             </p>
           </div>
         </MotionWrapper>
@@ -102,7 +115,7 @@ const Contact = () => {
                            hover:scale-105 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]
                            focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
-                  Send Message
+                  <GradientKeyword>Send Message</GradientKeyword>
                 </button>
               </div>
             </MotionWrapper>
@@ -111,12 +124,12 @@ const Contact = () => {
             <MotionWrapper delay={0.6}>
               <div className="mt-12 text-center">
                 <p className="text-gray-400 text-sm">
-                  Prefer email? Reach me directly at{' '}
+                  Prefer <GradientKeyword>email</GradientKeyword>? Reach me directly at{' '}
                   <a 
                     href="mailto:briankarmo@briankarmo.com"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                   >
-                    briankarmo@briankarmo.com
+                    <GradientTech>briankarmo@briankarmo.com</GradientTech>
                   </a>
                 </p>
               </div>
@@ -124,7 +137,7 @@ const Contact = () => {
 
             {/* Social Platform Images */}
             <MotionWrapper delay={0.7}>
-              <div className="flex justify-center items-center gap-12">
+              <div className="flex justify-center items-center gap-16 sm:gap-20 mt-8 mb-12 sm:mb-16 md:mb-20">
                 <a 
                   href="https://www.upwork.com/freelancers/briankarmo"
                   target="_blank"
@@ -136,7 +149,7 @@ const Contact = () => {
                     alt="Upwork Profile" 
                     width="128"
                     height="128"
-                    className="h-32 w-auto rounded-lg shadow-lg hover:shadow-cyan-500/20"
+                    className="h-28 sm:h-32 w-auto rounded-lg shadow-lg hover:shadow-cyan-500/20"
                   />
                 </a>
                 <a 
@@ -150,7 +163,7 @@ const Contact = () => {
                     alt="LinkedIn Profile" 
                     width="128"
                     height="128"
-                    className="h-32 w-auto rounded-lg shadow-lg hover:shadow-cyan-500/20"
+                    className="h-28 sm:h-32 w-auto rounded-lg shadow-lg hover:shadow-cyan-500/20"
                   />
                 </a>
               </div>

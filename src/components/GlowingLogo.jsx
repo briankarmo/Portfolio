@@ -10,10 +10,9 @@ const GlowingLogo = () => {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="relative group flex justify-center items-center">
-        {/* Glow effects */}
+        {/* Simple glow effect */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div className="absolute inset-[-30px] bg-blue-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute inset-[-15px] bg-cyan-500/20 rounded-full blur-2xl"></div>
+          <div className="absolute inset-[-15px] bg-blue-500/15 blur-xl"></div>
         </div>
         
         {/* Logo */}
@@ -24,7 +23,7 @@ const GlowingLogo = () => {
           height="112"
           className="w-28 h-auto relative z-10 transition-all duration-500 
                    group-hover:brightness-125 group-hover:contrast-125
-                   filter drop-shadow-[0_0_12px_rgba(59,130,246,0.4)]"
+                   filter drop-shadow-[0_0_8px_rgba(59,130,246,0.3)]"
         />
       </div>
     </motion.div>

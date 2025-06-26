@@ -1,6 +1,13 @@
 import React from "react";
 import MotionWrapper from './MotionWrapper';
 
+const GradientTech = ({ children }) => (
+  <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-semibold">{children}</span>
+);
+const GradientKeyword = ({ children }) => (
+  <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-white bg-clip-text text-transparent font-semibold">{children}</span>
+);
+
 // Tech data
 const techs = [
   // Front-End (1–17)
@@ -72,8 +79,8 @@ const TechCard = ({ src, title, style, index }) => (
         className="w-full h-full object-contain transform hover:rotate-3 transition-transform duration-300"
       />
     </div>
-    <p className="mt-2 sm:mt-3 text-center text-xs sm:text-sm md:text-base font-medium text-gray-300">
-      {title}
+    <p className="mt-2 sm:mt-3 text-center text-xs sm:text-sm md:text-base font-medium">
+      <GradientTech>{title}</GradientTech>
     </p>
   </div>
   </MotionWrapper>
@@ -90,10 +97,10 @@ const Experience = () => (
       <MotionWrapper>
       <div className="text-center mb-8 sm:mb-12">
         <p className="text-2xl sm:text-3xl md:text-4xl font-bold inline border-b-4 border-green-600">
-          Experience
+          <GradientTech>Experience</GradientTech>
         </p>
-        <p className="mt-4 text-sm sm:text-base text-gray-300 max-w-2xl mx-auto">
-          Technologies I&apos;ve worked with to build high‑performance applications:
+        <p className="mt-4 text-sm sm:text-base max-w-2xl mx-auto">
+          <GradientKeyword>Technologies</GradientKeyword> I&apos;ve worked with to build <GradientKeyword>high‑performance applications</GradientKeyword>:
         </p>
       </div>
       </MotionWrapper>
@@ -130,8 +137,8 @@ const Experience = () => (
         </div>
         
         {/* Tagline */}
-        <p className="mt-4 text-gray-400 text-xs sm:text-sm md:text-base text-center font-light tracking-wider">
-          Crafting Digital Excellence
+        <p className="mt-4 text-xs sm:text-sm md:text-base text-center font-light tracking-wider">
+          <GradientKeyword>Crafting Digital Excellence</GradientKeyword>
         </p>
       </div>
       </MotionWrapper>

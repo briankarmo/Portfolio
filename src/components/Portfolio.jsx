@@ -5,6 +5,19 @@ import { FaGithub, FaLinkedin, FaTwitter, FaFileAlt } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+// Gradient Components
+const GradientTech = ({ children }) => (
+  <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-medium">
+    {children}
+  </span>
+);
+
+const GradientKeyword = ({ children }) => (
+  <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-white bg-clip-text text-transparent font-medium">
+    {children}
+  </span>
+);
+
 // Motion Wrapper Component
 const MotionWrapper = ({ children, delay = 0 }) => (
   <motion.div
@@ -40,7 +53,11 @@ const projects = [
     src: "/assets/portfolio/boston.png",
     demo: "https://www.bostoninnovations.org/company",
     title: "Boston Innovations",
-    description: "SEO-Optimized Portfolio Site with Next.js & Tailwind CSS.",
+    description: (
+      <>
+        <GradientKeyword>SEO-Optimized</GradientKeyword> Portfolio Site with <GradientTech>Next.js</GradientTech> & <GradientTech>Tailwind CSS</GradientTech>.
+      </>
+    ),
     tags: ["Next.js", "Tailwind CSS", "SEO"],
   },
   {
@@ -48,7 +65,11 @@ const projects = [
     src: "/assets/portfolio/shutter.png",
     demo: "https://shutterguide.io/",
     title: "ShutterGuide.IO",
-    description: "Photography platform with Next.js, Firebase auth, and Stripe secure payment.",
+    description: (
+      <>
+        <GradientKeyword>Photography platform</GradientKeyword> with <GradientTech>Next.js</GradientTech>, <GradientTech>Firebase</GradientTech> auth, and <GradientTech>Stripe</GradientTech> <GradientKeyword>secure payment</GradientKeyword>.
+      </>
+    ),
     tags: ["Next.js", "Firebase", "Stripe"],
   },
   {
@@ -56,7 +77,11 @@ const projects = [
     src: "/assets/portfolio/shopify.png",
     demo: "https://zazadepotmi.myshopify.com/",
     title: "Bespoke Shopify Liquid Development",
-    description: "Custom Shopify eCommerce store with bespoke Liquid theme development and advanced functionality.",
+    description: (
+      <>
+        <GradientKeyword>Custom</GradientKeyword> <GradientTech>Shopify</GradientTech> <GradientKeyword>eCommerce</GradientKeyword> store with <GradientKeyword>bespoke</GradientKeyword> <GradientTech>Liquid</GradientTech> theme development and <GradientKeyword>advanced functionality</GradientKeyword>.
+      </>
+    ),
     tags: ["Shopify", "Liquid", "eCommerce", "Custom Theme"],
   },
   {
@@ -64,7 +89,11 @@ const projects = [
     src: "/assets/portfolio/ModernApp.png",
     demo: "https://bk-inc-modern-app.netlify.app/",
     title: "Modern Business App",
-    description: "Responsive business application showcasing modern UI/UX principles.",
+    description: (
+      <>
+        <GradientKeyword>Responsive</GradientKeyword> business application showcasing <GradientKeyword>modern</GradientKeyword> <GradientTech>UI/UX</GradientTech> principles.
+      </>
+    ),
     tags: ["React", "Tailwind CSS", "UI/UX"],
   },
   {
@@ -72,7 +101,11 @@ const projects = [
     src: "/assets/portfolio/Apple.png",
     demo: "https://bkinc525.netlify.app/",
     title: "iPhone Landing Page",
-    description: "Interactive product showcase featuring Three.js 3D modeling.",
+    description: (
+      <>
+        <GradientKeyword>Interactive</GradientKeyword> product showcase featuring <GradientTech>Three.js</GradientTech> <GradientKeyword>3D modeling</GradientKeyword>.
+      </>
+    ),
     tags: ["Three.js", "3D", "Animation"]
   },
   {
@@ -80,7 +113,11 @@ const projects = [
     src: "/assets/portfolio/weather.png",
     demo: "https://bkinc-weather.netlify.app/",
     title: "Weather Tracker",
-    description: "Real-time weather application using OpenWeatherMap API.",
+    description: (
+      <>
+        <GradientKeyword>Real-time</GradientKeyword> weather application using <GradientTech>OpenWeatherMap API</GradientTech>.
+      </>
+    ),
     tags: ["API", "React", "Real-time"],
   },
   {
@@ -88,7 +125,11 @@ const projects = [
     src: "/assets/portfolio/three.png",
     demo: "https://briankarmo-3js-3d.netlify.app/",
     title: "3D Portfolio",
-    description: "Interactive 3D portfolio built with Three.js.",
+    description: (
+      <>
+        <GradientKeyword>Interactive</GradientKeyword> <GradientKeyword>3D portfolio</GradientKeyword> built with <GradientTech>Three.js</GradientTech>.
+      </>
+    ),
     tags: ["Three.js", "3D", "Interactive"],
   },
   {
@@ -96,7 +137,11 @@ const projects = [
     src: "/assets/portfolio/bkinctube.png",
     demo: "https://bkcodetube.netlify.app/",
     title: "BK Code Tube",
-    description: "Video platform utilizing React Router and YouTube API integration.",
+    description: (
+      <>
+        <GradientKeyword>Video platform</GradientKeyword> utilizing <GradientTech>React Router</GradientTech> and <GradientTech>YouTube API</GradientTech> integration.
+      </>
+    ),
     tags: ["React Router", "YouTube API", "Video"],
   },
 ];
@@ -138,16 +183,16 @@ const ProjectCard = ({ src, demo, title, description, tags, index }) => (
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.7 }}
               transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-              className="px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-gray-800/80 to-gray-900/80 border border-gray-700/50 text-gray-300"
+              className="px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-gray-800/80 to-gray-900/80 border border-gray-700/50"
             >
-              {tag}
+              <GradientTech>{tag}</GradientTech>
             </motion.span>
           ))}
         </div>
 
         {/* Title with gradient text */}
-        <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-          {title}
+        <h3 className="text-xl font-bold mb-2">
+          <GradientTech>{title}</GradientTech>
         </h3>
 
         {/* Demo link with gradient border */}
@@ -164,7 +209,7 @@ const ProjectCard = ({ src, demo, title, description, tags, index }) => (
                    hover:border-gray-600/50
                    hover:shadow-[0_0_15px_rgba(0,0,0,0.3)]"
         >
-          View Demo
+          <GradientKeyword>View Demo</GradientKeyword>
         </a>
       </div>
     </div>
@@ -229,15 +274,15 @@ const Portfolio = () => {
                      border border-gray-700/30"
           data-aos="fade-down"
         >
-          <h1 className="text-4xl font-bold inline-block text-white border-b-4 border-cyan-500">
-            Portfolio
+          <h1 className="text-4xl font-bold inline-block border-b-4 border-cyan-500">
+            <GradientTech>Portfolio</GradientTech>
           </h1>
           <p 
             className="text-gray-100 mt-6"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            A showcase of my recent work and projects
+            A <GradientKeyword>showcase</GradientKeyword> of my recent <GradientKeyword>work</GradientKeyword> and <GradientKeyword>projects</GradientKeyword>
           </p>
         </div>
 

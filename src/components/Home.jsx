@@ -5,6 +5,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { motion } from "framer-motion";
 
+const GradientTech = ({ children }) => (
+  <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-semibold">{children}</span>
+);
+const GradientKeyword = ({ children }) => (
+  <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-white bg-clip-text text-transparent font-semibold">{children}</span>
+);
+
 const Home = () => {
   useEffect(() => {
     // Initialize AOS
@@ -26,30 +33,30 @@ const Home = () => {
 
   const categories = [
     {
-      title: "Development",
+      title: <GradientTech>Development</GradientTech>,
       items: [
-        "Full-Stack Web Development",
-        "Mobile-First Responsive Design",
-        "Cross-Platform Compatibility",
-        "Performance Optimization"
+        <><GradientKeyword>Full-Stack</GradientKeyword> Web Development</>,
+        <><GradientKeyword>Mobile-First</GradientKeyword> Responsive Design</>,
+        <><GradientKeyword>Cross-Platform</GradientKeyword> Compatibility</>,
+        <><GradientKeyword>Performance</GradientKeyword> Optimization</>
       ]
     },
     {
-      title: "Technical",
+      title: <GradientTech>Technical</GradientTech>,
       items: [
-        "Modern Framework Implementation",
-        "API Integration & Development",
-        "Database Architecture",
-        "Cloud Services Management"
+        <><GradientKeyword>Modern Framework</GradientKeyword> Implementation</>,
+        <><GradientTech>API</GradientTech> Integration & Development</>,
+        <><GradientKeyword>Database</GradientKeyword> Architecture</>,
+        <><GradientKeyword>Cloud Services</GradientKeyword> Management</>
       ]
     },
     {
-      title: "Professional",
+      title: <GradientTech>Professional</GradientTech>,
       items: [
-        "Project Management",
-        "Technical Documentation",
-        "Team Collaboration",
-        "Problem-Solving"
+        <><GradientKeyword>Project Management</GradientKeyword></>,
+        <><GradientKeyword>Technical Documentation</GradientKeyword></>,
+        <><GradientKeyword>Team Collaboration</GradientKeyword></>,
+        <><GradientKeyword>Problem-Solving</GradientKeyword></>
       ]
     }
   ];
@@ -105,10 +112,10 @@ const Home = () => {
                 transition={{ duration: 1, delay: 1.2 }}
                 className="w-full backdrop-blur-sm bg-gray-900/30 p-3 sm:p-4 rounded-2xl"
               >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-signature font-bold bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent whitespace-normal">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-signature font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent whitespace-normal">
                   Brian Karmo
                 </h1>
-                <h2 className="mt-2 text-xl sm:text-2xl md:text-3xl font-semibold bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent">
+                <h2 className="mt-2 text-xl sm:text-2xl md:text-3xl font-semibold bg-gradient-to-r from-purple-500 via-blue-500 to-white bg-clip-text text-transparent">
                   Full-Stack Software Engineer
                 </h2>
               </motion.div>
@@ -173,7 +180,7 @@ const Home = () => {
             duration: 0.8,
             ease: [0.22, 1, 0.36, 1]
           }}
-          className="mt-16 sm:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"
+          className="mt-16 sm:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto"
         >
           {categories.map((category, index) => (
             <motion.div
@@ -186,13 +193,13 @@ const Home = () => {
                 delay: 0.2,
                 ease: [0.22, 1, 0.36, 1]
               }}
-              className="backdrop-blur-sm bg-gray-900/30 p-6 rounded-2xl"
+              className="backdrop-blur-sm bg-gray-900/30 p-4 sm:p-6 rounded-2xl h-full flex flex-col"
             >
-              <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent mb-4">{category.title}</h3>
-              <ul className="space-y-3">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-center">{category.title}</h3>
+              <ul className="space-y-2 sm:space-y-3 flex-1">
                 {category.items.map((item, itemIndex) => (
                   <motion.li
-                    key={item}
+                    key={itemIndex}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
@@ -201,10 +208,12 @@ const Home = () => {
                       delay: 0.1 * itemIndex,
                       ease: [0.22, 1, 0.36, 1]
                     }}
-                    className="flex items-center text-gray-200"
+                    className="flex items-start text-gray-200 text-sm sm:text-base justify-center md:justify-start"
                   >
-                    <span className="mr-2 bg-gradient-to-r from-blue-900 to-white bg-clip-text text-transparent">•</span>
-                    {item}
+                    <div className="flex items-start justify-center md:justify-start w-full">
+                      <span className="mr-3 mt-1 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent flex-shrink-0 text-lg">•</span>
+                      <span className="leading-relaxed text-center md:text-left">{item}</span>
+                    </div>
                   </motion.li>
                 ))}
               </ul>
