@@ -128,4 +128,4 @@ export const AnimationProvider = ({ children }) => {
   );
 };
 
-export const useAnimation = () => useContext(AnimationContext); 
+ 

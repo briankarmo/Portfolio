@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const GlowingLogo = () => {
   return (
@@ -9,21 +10,13 @@ const GlowingLogo = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="relative group flex justify-center items-center">
-        {/* Simple glow effect */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <div className="absolute inset-[-15px] bg-blue-500/15 blur-xl"></div>
-        </div>
-        
-        {/* Logo */}
-        <img 
+      <div className="flex justify-center items-center">
+        <Image 
           src="/assets/bkinclogo.png"
           alt="BKINC Logo" 
-          width="112"
-          height="112"
-          className="w-28 h-auto relative z-10 transition-all duration-500 
-                   group-hover:brightness-125 group-hover:contrast-125
-                   filter drop-shadow-[0_0_8px_rgba(59,130,246,0.3)]"
+          width={112}
+          height={112}
+          className="w-28 h-auto"
         />
       </div>
     </motion.div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { FiMail, FiUser, FiMessageSquare } from "react-icons/fi";
 import MotionWrapper from './MotionWrapper';
+import Image from "next/image";
 
 // Gradient Components
 const GradientTech = ({ children }) => (
@@ -144,11 +145,11 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="transform transition-all duration-300 hover:scale-105"
                 >
-                  <img 
+                  <Image 
                     src="/assets/upwork.png"
                     alt="Upwork Profile" 
-                    width="128"
-                    height="128"
+                    width={128}
+                    height={128}
                     className="h-28 sm:h-32 w-auto rounded-lg shadow-lg hover:shadow-cyan-500/20"
                   />
                 </a>
@@ -158,11 +159,11 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="transform transition-all duration-300 hover:scale-105"
                 >
-                  <img 
+                  <Image 
                     src="/assets/linkedin.webp"
                     alt="LinkedIn Profile" 
-                    width="128"
-                    height="128"
+                    width={128}
+                    height={128}
                     className="h-28 sm:h-32 w-auto rounded-lg shadow-lg hover:shadow-cyan-500/20"
                   />
                 </a>

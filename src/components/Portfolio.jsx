@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaTwitter, FaFileAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import MotionWrapper from './MotionWrapper';
 
 // Gradient Components
 const GradientTech = ({ children }) => (
@@ -18,34 +19,7 @@ const GradientKeyword = ({ children }) => (
   </span>
 );
 
-// Motion Wrapper Component
-const MotionWrapper = ({ children, delay = 0 }) => (
-  <motion.div
-    initial={{ 
-      y: 50,
-      opacity: 0,
-      scale: 0.95
-    }}
-    whileInView={{ 
-      y: 0, 
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: [0.22, 1, 0.36, 1],
-        delay: delay
-      }
-    }}
-    viewport={{ 
-      once: true,
-      amount: 0.1,
-      margin: "-50px"
-    }}
-    className="w-full"
-  >
-    {children}
-  </motion.div>
-);
+
 
 const projects = [
   {
