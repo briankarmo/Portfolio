@@ -144,7 +144,7 @@ const Home = () => {
               {/* Image container */}
               <div className="relative block w-full max-w-md lg:max-w-lg">
                 <Image
-                  src="/assets/heroimage.png"
+                  src="/heroimage.png"
                   alt="Hero"
                   width={600}
                   height={600}

@@ -20,7 +20,6 @@ export default function HomePage() {
   const toggleLogo = () => {
     setLogoActive(!logoActive);
   };
-  
   return (
     <AnimationProvider>
       <motion.div
@@ -102,37 +101,35 @@ export default function HomePage() {
                     className="relative group flex justify-center items-center cursor-pointer"
                     onClick={toggleLogo}
                   >
-                    {/* Liquid bubble effect - single clean border */}
-                    <div className={`absolute top-[-20px] left-[-20px] right-[-20px] bottom-[-20px] rounded-full transition-all duration-700 ease-out ${
+                    {/* Circular metallic border elements */}
+                    <div className={`absolute inset-[-12px] rounded-full border transition-all duration-500 ${
                       logoActive 
-                        ? 'bg-gradient-to-br from-white/20 via-white/10 to-transparent border-2 border-white/30 shadow-[0_0_40px_rgba(255,255,255,0.3),inset_0_2px_10px_rgba(255,255,255,0.2)]' 
-                        : 'bg-gradient-to-br from-white/8 via-white/4 to-transparent border border-white/15 group-hover:border-white/25 group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]'
+                        ? 'border-gray-300/70' 
+                        : 'border-gray-400/30 group-hover:border-gray-300/50'
+                    }`}></div>
+                    <div className={`absolute inset-[-8px] rounded-full border transition-all duration-500 ${
+                      logoActive 
+                        ? 'border-blue-300/80' 
+                        : 'border-blue-400/40 group-hover:border-blue-300/60'
                     }`}></div>
                     
-                    {/* Liquid surface reflection */}
-                    <div className={`absolute top-[-20px] left-[-20px] right-[-20px] bottom-[-20px] rounded-full bg-gradient-to-tr from-white/15 via-transparent to-transparent transition-opacity duration-700 ${
+                    {/* Metallic reflection on circles */}
+                    <div className={`absolute inset-[-12px] rounded-full bg-gradient-to-br from-white/5 via-transparent to-transparent transition-opacity duration-500 ${
                       logoActive 
-                        ? 'opacity-100' 
+                        ? 'opacity-90' 
                         : 'opacity-60 group-hover:opacity-80'
                     }`}></div>
                     
-                    {/* Inner liquid glow */}
-                    <div className={`absolute top-[-10px] left-[-10px] right-[-10px] bottom-[-10px] rounded-full transition-all duration-700 ${
-                      logoActive 
-                        ? 'bg-gradient-radial from-white/10 to-transparent shadow-[inset_0_0_20px_rgba(255,255,255,0.1)]'
-                        : 'bg-transparent'
-                    }`}></div>
-                    
-                    {/* Logo with liquid effect */}
+                    {/* Logo with internal brightness */}
                     <Image 
                       src="/assets/bkinclogo.png"
                       alt="BKINC Logo" 
                       width={128}
                       height={128}
-                      className={`w-32 h-auto relative z-10 transition-all duration-700 ease-out ${
+                      className={`w-32 h-auto relative z-10 transition-all duration-500 ${
                         logoActive 
-                          ? 'brightness-150 contrast-130 scale-110 drop-shadow-[0_0_30px_rgba(255,255,255,0.6)] filter saturate-110'
-                          : 'brightness-110 contrast-110 group-hover:brightness-125 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]'
+                          ? 'brightness-150 contrast-125 scale-105 drop-shadow-[0_0_25px_rgba(59,130,246,0.8)]'
+                          : 'brightness-125 contrast-115 group-hover:brightness-150 group-hover:contrast-125 group-hover:scale-105 group-hover:drop-shadow-[0_0_25px_rgba(59,130,246,0.8)] group-active:drop-shadow-[0_0_30px_rgba(255,255,255,0.9)] group-active:brightness-175'
                       }`}
                     />
                   </div>

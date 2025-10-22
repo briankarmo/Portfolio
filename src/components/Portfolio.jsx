@@ -19,12 +19,29 @@ const GradientKeyword = ({ children }) => (
   </span>
 );
 
-
-
 const projects = [
+  // NEW FIRST PROJECT — GovLink Global
   {
     id: 1,
-    src: "/assets/portfolio/boston.png",
+    src: "/assets/portfolio/govlink-800x450.webp",
+    demo: "https://govlinkglobal.com/",
+    title: "GovLink Global",
+    description: (
+      <>
+        <GradientKeyword>MERN</GradientKeyword> platform connecting elite consultants with{" "}
+        <GradientKeyword>US & global</GradientKeyword> government projects. Smart{" "}
+        <GradientKeyword>search</GradientKeyword> & matching; 2.4k+ talent, 98% success, ~48h avg match. Built for{" "}
+        <GradientKeyword>scale</GradientKeyword> with clean, user-focused <GradientTech>UI/UX</GradientTech>.
+      </>
+    ),
+    // Ensure one of the three bubbles shows MERN
+    tags: ["MERN", "Full-stack", "UI/UX"],
+  },
+
+  // Existing items (ids incremented just to keep them unique)
+  {
+    id: 2,
+    src: "/assets/portfolio/boston-800x450.webp",
     demo: "https://www.bostoninnovations.org/company",
     title: "Boston Innovations",
     description: (
@@ -35,8 +52,8 @@ const projects = [
     tags: ["Next.js", "Tailwind CSS", "SEO"],
   },
   {
-    id: 2,
-    src: "/assets/portfolio/shutter.png",
+    id: 3,
+    src: "/assets/portfolio/shutter-800x450.webp",
     demo: "https://shutterguide.io/",
     title: "ShutterGuide.IO",
     description: (
@@ -47,8 +64,8 @@ const projects = [
     tags: ["Next.js", "Firebase", "Stripe"],
   },
   {
-    id: 3,
-    src: "/assets/portfolio/shopify.png",
+    id: 4,
+    src: "/assets/portfolio/shopify-800x450.webp",
     demo: "https://zazadepotmi.myshopify.com/",
     title: "Bespoke Shopify Liquid Development",
     description: (
@@ -59,8 +76,8 @@ const projects = [
     tags: ["Shopify", "Liquid", "eCommerce", "Custom Theme"],
   },
   {
-    id: 4,
-    src: "/assets/portfolio/ModernApp.png",
+    id: 5,
+    src: "/assets/portfolio/ModernApp-800x450.webp",
     demo: "https://bk-inc-modern-app.netlify.app/",
     title: "Modern Business App",
     description: (
@@ -71,8 +88,8 @@ const projects = [
     tags: ["React", "Tailwind CSS", "UI/UX"],
   },
   {
-    id: 5,
-    src: "/assets/portfolio/Apple.png",
+    id: 6,
+    src: "/assets/portfolio/Apple-800x450.webp",
     demo: "https://bkinc525.netlify.app/",
     title: "iPhone Landing Page",
     description: (
@@ -83,8 +100,8 @@ const projects = [
     tags: ["Three.js", "3D", "Animation"]
   },
   {
-    id: 6,
-    src: "/assets/portfolio/weather.png",
+    id: 7,
+    src: "/assets/portfolio/weather-800x450.webp",
     demo: "https://bkinc-weather.netlify.app/",
     title: "Weather Tracker",
     description: (
@@ -95,8 +112,8 @@ const projects = [
     tags: ["API", "React", "Real-time"],
   },
   {
-    id: 7,
-    src: "/assets/portfolio/three.png",
+    id: 8,
+    src: "/assets/portfolio/three-800x450.webp",
     demo: "https://briankarmo-3js-3d.netlify.app/",
     title: "3D Portfolio",
     description: (
@@ -107,8 +124,8 @@ const projects = [
     tags: ["Three.js", "3D", "Interactive"],
   },
   {
-    id: 8,
-    src: "/assets/portfolio/bkinctube.png",
+    id: 9,
+    src: "/assets/portfolio/bkinctube-800x450.webp",
     demo: "https://bkcodetube.netlify.app/",
     title: "BK Code Tube",
     description: (

@@ -46,13 +46,13 @@ export const metadata = {
   manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: '/heroImage-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/heroImage-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/bk-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/bk-16x16.png', sizes: '16x16', type: 'image/png' },
     ],
     apple: [
-      { url: '/heroImage-180x180.png', sizes: '180x180', type: 'image/png' },
+      { url: '/bk-180x180.png', sizes: '180x180', type: 'image/png' },
     ],
-    shortcut: '/heroImage.ico',
+    shortcut: ['/favicon.ico', '/bk.ico'],
   },
   robots: {
     index: true,
@@ -96,12 +96,12 @@ export default function RootLayout({ children }) {
         <meta name="twitter:image:alt" content="Brian Karmo - Software Developer" />
         
         {/* Preload critical images */}
-        <link rel="preload" as="image" href="/heroImage.png" />
+        <link rel="preload" as="image" href="/heroimage.png" />
         <link rel="preload" as="image" href="/heroImage-1200x630.png" />
         
-        <link rel="icon" type="image/png" sizes="32x32" href="/heroImage-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/heroImage-16x16.png" />
-        <link rel="shortcut icon" href="/heroImage.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/bk-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/bk-16x16.png" />
+        <link rel="shortcut icon" href="/bk.ico" />
       </head>
       <body className={inter.className}>
         {children}
