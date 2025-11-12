@@ -15,7 +15,7 @@ const SocialLinks = () => {
   const links = [
     { id: 4, text: "Upwork", icon: <SiUpwork className="text-[#14A800]" />, href: "https://www.upwork.com/freelancers/briankarmo?mp_source=share", external: true },
     { id: 3, text: "Resume", icon: <BsFillPersonLinesFill className="text-gray-300" />, href: "/Brian-Karmo.pdf", download: "Brian-Karmo.pdf" },
-    { id: 2, text: "Email", icon: <HiOutlineMail className="text-blue-400" />, href: "mailto:briankarmo@briankarmo.com", external: true },
+    { id: 2, text: "Email", icon: <HiOutlineMail className="text-blue-400" />, href: "mailto:karmobrian@gmail.com", external: true },
     { id: 1, text: "LinkedIn", icon: <FaLinkedin className="text-blue-600" />, href: "https://www.linkedin.com/in/briankarmo/", external: true },
     { id: 0, text: "GitHub", icon: <FaGithub className="text-white" />, href: "https://github.com/briankarmo", external: true },
   ];

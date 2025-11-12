@@ -25,7 +25,7 @@ const NavBar = () => {
     { id: 2, link: "about" },
     { id: 3, link: "techstack" },
     { id: 4, link: "portfolio" },
-    { id: 6, link: "contact" },
+    { id: 5, link: "contact" },
   ];
 
   const handleNav = () => {
@@ -37,14 +37,11 @@ const NavBar = () => {
       initial="hidden"
       animate="visible"
       variants={navVariants}
-      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
-        scrolled 
-          ? 'bg-black/80 backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 w-full z-[100] transition-all duration-500 bg-transparent"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+      <div className="bg-black/70 backdrop-blur-md shadow-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -119,6 +116,7 @@ const NavBar = () => {
               </motion.div>
             </AnimatePresence>
           </motion.button>
+          </div>
         </div>
       </div>
 
@@ -131,9 +129,29 @@ const NavBar = () => {
             exit={{ opacity: 0, x: "-100%" }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="md:hidden fixed inset-0 bg-gradient-to-b from-black/98 via-black/95 to-black/98 backdrop-blur-lg z-[105]"
+            onClick={() => setNav(false)}
           >
+            {/* Close Button - Fixed Position */}
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => {
+                e.stopPropagation();
+                setNav(false);
+              }}
+              className="fixed top-4 right-4 z-[120] p-3 rounded-lg bg-gray-800/80 text-white hover:bg-gray-700 
+                       focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all duration-300"
+              aria-label="Close menu"
+            >
+              <AiOutlineClose size={28} />
+            </motion.button>
             {/* Menu Items Container */}
-            <div className="flex flex-col items-center justify-center min-h-screen w-full py-20 space-y-6">
+            <div 
+              className="flex flex-col items-center justify-center min-h-screen w-full py-20 space-y-6"
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="text-center mb-8">
                 <motion.p 
                   initial={{ opacity: 0, y: -10 }}
