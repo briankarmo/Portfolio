@@ -64,7 +64,6 @@ const categories = {
           { id: 21, src: "/assets/laravel.png", title: "Laravel" },
           { id: 22, src: "/assets/nest.png", title: "NestJS" },
           { id: 23, src: "/assets/mern.png", title: "MERN Stack" },
-          { id: 24, src: "/assets/liquid.jpg", title: "Shopify Liquid" },
         ],
       },
       databases: {

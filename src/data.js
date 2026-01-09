@@ -1,5 +1,4 @@
 import ShutterGuide from "./assets/portfolio/shutter.png";
-import Shopify from "./assets/portfolio/shopify.png";
 import ModernApp from "./assets/portfolio/ModernApp.png";
 import Apple from "./assets/portfolio/Apple.png";
 import Three from "./assets/portfolio/three.png";
@@ -16,14 +15,6 @@ export const projects = [
   },
   {
     id: 2,
-    src: Shopify,
-    demo: "https://zazadepotmi.myshopify.com/",
-    title: "ZAZA Depot Store",
-    description: "Custom Shopify storefront with advanced product filtering, custom theme development, and optimized checkout flow. Includes inventory management, customer reviews, and social media integration.",
-    tags: ["Shopify", "Liquid", "eCommerce"],
-  },
-  {
-    id: 3,
     src: ModernApp,
     demo: "https://bk-inc-modern-app.netlify.app/",
     title: "Modern Payment Platform",
@@ -31,7 +22,7 @@ export const projects = [
     tags: ["React", "Three.js", "Payments"],
   },
   {
-    id: 4,
+    id: 3,
     src: Apple,
     demo: "https://briankarmo-appledemo.netlify.app/",
     title: "iPhone 3D Showcase",
@@ -39,7 +30,7 @@ export const projects = [
     tags: ["Three.js", "React", "GSAP"],
   },
   {
-    id: 5,
+    id: 4,
     src: Three,
     demo: "https://briankarmo-threejs-nocontact.netlify.app/",
     title: "3D Developer Portfolio",
@@ -47,7 +38,7 @@ export const projects = [
     tags: ["Three.js", "React", "3D", "WebGL"],
   },
   {
-    id: 6,
+    id: 5,
     src: Weather,
     demo: "https://briankarmo-weather.netlify.app/",
     title: "Weather Dashboard",

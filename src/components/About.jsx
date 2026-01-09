@@ -66,18 +66,8 @@ const About = () => {
             </div>
             </MotionWrapper>
 
-            {/* eCommerce Expertise */}
-            <MotionWrapper delay={0.8}>
-            <div className="bg-gray-900/30 rounded-lg p-6 mx-4 sm:mx-0">
-              <p className="text-gray-200 leading-relaxed sm:leading-loose m-0">
-                With specialized expertise in custom <GradientTech>Shopify Liquid coding</GradientTech>,
-                I enhance <GradientTech>eCommerce platforms</GradientTech>, showcasing an <GradientKeyword>innovative approach</GradientKeyword> and delivering <GradientKeyword>impactful results</GradientKeyword> within the <GradientTech>digital marketplace</GradientTech>.
-              </p>
-            </div>
-            </MotionWrapper>
-
             {/* Security & Infrastructure */}
-            <MotionWrapper delay={1}>
+            <MotionWrapper delay={0.8}>
             <div className="bg-gray-900/30 rounded-lg p-6 mx-4 sm:mx-0">
               <p className="text-gray-200 leading-relaxed sm:leading-loose m-0">
                 For <GradientKeyword>secure payment systems</GradientKeyword> and <GradientKeyword>data protection</GradientKeyword>, I implement <GradientKeyword>advanced encryption methods</GradientKeyword> alongside trusted third-party services. 

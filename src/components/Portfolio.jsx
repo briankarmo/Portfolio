@@ -37,6 +37,18 @@ const projects = [
   },
   {
     id: 2,
+    src: "/assets/portfolio/keyo-800x450.webp",
+    demo: "https://keyo.com/",
+    title: "Keyo",
+    description: (
+      <>
+        <GradientKeyword>Scalable SaaS</GradientKeyword> web application built with <GradientTech>React</GradientTech> and modern backend services, featuring <GradientKeyword>responsive UI</GradientKeyword>, <GradientKeyword>secure API</GradientKeyword> integrations, and streamlined business workflows. Designed for <GradientKeyword>performance</GradientKeyword> and <GradientKeyword>future growth</GradientKeyword>.
+      </>
+    ),
+    tags: ["React", "Full-stack", "SaaS"],
+  },
+  {
+    id: 3,
     src: "/assets/portfolio/shutter-800x450.webp",
     demo: "https://shutterguide.io/",
     title: "ShutterGuide.IO",
@@ -46,18 +58,6 @@ const projects = [
       </>
     ),
     tags: ["Next.js", "Firebase", "Stripe"],
-  },
-  {
-    id: 3,
-    src: "/assets/portfolio/shopify-800x450.webp",
-    demo: "https://zazadepotmi.myshopify.com/",
-    title: "Bespoke Shopify Liquid Development",
-    description: (
-      <>
-        <GradientKeyword>Custom</GradientKeyword> <GradientTech>Shopify</GradientTech> <GradientKeyword>eCommerce</GradientKeyword> store with <GradientKeyword>bespoke</GradientKeyword> <GradientTech>Liquid</GradientTech> theme development and <GradientKeyword>advanced functionality</GradientKeyword>.
-      </>
-    ),
-    tags: ["Shopify", "Liquid", "eCommerce", "Custom Theme"],
   },
   {
     id: 4,
@@ -122,43 +122,46 @@ const projects = [
 ];
 
 const ProjectCard = ({ src, demo, title, description, tags, index }) => (
-  <MotionWrapper delay={index * 0.1}>
-    <div className="relative group">
+  <MotionWrapper delay={index * 0.1} className="h-full">
+    <div className="relative group h-full">
       {/* Background gradient with depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-800/50 via-gray-900/50 to-black/50 rounded-2xl transform transition-all duration-500 group-hover:scale-[1.02]"></div>
       
       {/* Border gradient */}
       <div className="absolute inset-0 rounded-2xl p-[1px] bg-gradient-to-br from-gray-600/30 via-gray-500/20 to-gray-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
-      {/* Content container */}
-      <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-900/95 to-black/90 rounded-2xl p-6 backdrop-blur-sm">
-        {/* Image container with 3D effect */}
-        <div className="relative image-container mb-3 w-full overflow-hidden rounded-xl bg-gray-950/50" style={{ aspectRatio: '16/9' }}>
+      {/* Content container - fixed height on tablet/desktop with proper spacing */}
+      <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-900/95 to-black/90 rounded-2xl p-4 md:p-6 backdrop-blur-sm h-full flex flex-col md:h-[560px] lg:h-[580px] overflow-hidden">
+        {/* Image container - fixed dimensions with object-contain */}
+        <div className="relative image-container mb-2 w-full overflow-hidden rounded-xl bg-gray-950/50 flex-shrink-0 h-[160px] md:h-[240px] lg:h-[260px]">
           <Image
             src={src}
             alt={title}
             width={800}
             height={450}
             className="w-full h-full object-contain transform transition duration-500 group-hover:scale-105"
+            style={{ objectFit: 'contain' }}
             priority={index < 2}
           />
         </div>
 
-        {/* Description */}
-        <p className="text-gray-300 mb-4 text-sm">
-          {description}
-        </p>
+        {/* Description - fixed height to ensure consistency */}
+        <div className="text-gray-300 mb-2 text-xs md:text-sm flex-shrink-0 h-[48px] md:h-[60px] lg:h-[66px] overflow-hidden">
+          <p className="line-clamp-3 leading-tight md:leading-normal">
+            {description}
+          </p>
+        </div>
 
-        {/* Animated skill tags above the button */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {tags.slice(0, 3).map((tag, i) => (
+        {/* Animated skill tags */}
+        <div className="flex flex-wrap gap-1.5 md:gap-2 mb-2 flex-shrink-0 min-h-[26px] md:h-[32px]">
+          {tags.slice(0, 4).map((tag, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.7 }}
               transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-              className="px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-gray-800/80 to-gray-900/80 border border-gray-700/50"
+              className="px-2 md:px-3 py-0.5 md:py-1 text-[10px] md:text-xs font-medium rounded-full bg-gradient-to-r from-gray-800/80 to-gray-900/80 border border-gray-700/50"
             >
               <GradientTech>{tag}</GradientTech>
             </motion.span>
@@ -166,23 +169,27 @@ const ProjectCard = ({ src, demo, title, description, tags, index }) => (
         </div>
 
         {/* Title with gradient text */}
-        <h3 className="text-xl font-bold mb-2">
+        <h3 className="text-lg md:text-xl font-bold mb-2 flex-shrink-0">
           <GradientTech>{title}</GradientTech>
         </h3>
 
-        {/* Demo link with gradient border */}
+        {/* Spacer to push button to bottom */}
+        <div className="flex-grow min-h-[8px]"></div>
+
+        {/* Demo link - centered at bottom */}
         <a
           href={demo}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-block px-4 py-2 rounded-lg
+          className="block px-4 md:px-6 pt-2 pb-[5px] rounded-lg text-sm
                    bg-gradient-to-r from-gray-800/80 to-gray-900/80
                    border border-gray-700/50
                    text-gray-300 hover:text-white
                    transition-all duration-300
                    hover:from-gray-700/80 hover:to-gray-800/80
                    hover:border-gray-600/50
-                   hover:shadow-[0_0_15px_rgba(0,0,0,0.3)]"
+                   hover:shadow-[0_0_15px_rgba(0,0,0,0.3)]
+                   flex-shrink-0 w-fit mx-auto mb-2 md:mb-4 text-center"
         >
           <GradientKeyword>View Demo</GradientKeyword>
         </a>
