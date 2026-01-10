@@ -1,0 +1,40 @@
+{
+  "name": "my-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "images:hero": "node scripts/generate-hero-images.mjs",
+    "images:favicon": "node scripts/generate-favicon.mjs",
+    "images:projects": "node scripts/generate-project-images.mjs",
+    "images:social": "node scripts/generate-social-images.mjs",
+    "images:logo": "node scripts/generate-logo-icons.mjs",
+    "images:all": "npm run images:hero && npm run images:favicon && npm run images:projects && npm run images:social && npm run images:logo"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "esbuild": "^0.19.12",
+    "framer-motion": "^12.17.0",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
+    "react-scroll": "^1.8.9",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "png-to-ico": "^3.0.1",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}
