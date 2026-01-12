@@ -33,7 +33,7 @@ const projects = [
         <GradientKeyword>scale</GradientKeyword> with clean, user-focused <GradientTech>UI/UX</GradientTech>.
       </>
     ),
-    tags: ["MERN", "Full-stack", "UI/UX"],
+    tags: ["MERN", "Full-stack", "API", "AWS"],
   },
   {
     id: 2,
@@ -42,13 +42,25 @@ const projects = [
     title: "Keyo",
     description: (
       <>
-        <GradientKeyword>Scalable SaaS</GradientKeyword> web application built with <GradientTech>React</GradientTech> and modern backend services, featuring <GradientKeyword>responsive UI</GradientKeyword>, <GradientKeyword>secure API</GradientKeyword> integrations, and streamlined business workflows. Designed for <GradientKeyword>performance</GradientKeyword> and <GradientKeyword>future growth</GradientKeyword>.
+        <GradientKeyword>Scalable SaaS</GradientKeyword> web application built with <GradientTech>Vue.js</GradientTech> and modern backend services, featuring <GradientKeyword>responsive UI</GradientKeyword>, <GradientKeyword>secure API</GradientKeyword> integrations, and streamlined business workflows. Designed for <GradientKeyword>performance</GradientKeyword> and <GradientKeyword>future growth</GradientKeyword>.
       </>
     ),
-    tags: ["React", "Full-stack", "SaaS"],
+    tags: ["Vue.js", "Full-stack", "API", "AWS"],
   },
   {
     id: 3,
+    src: "/assets/portfolio/sheperd-800x450.webp",
+    demo: "https://shepherd.study/",
+    title: "Sheperd",
+    description: (
+      <>
+        <GradientKeyword>Scalable web app</GradientKeyword> featuring <GradientKeyword>AI content processing</GradientKeyword>, <GradientKeyword>dynamic study tools</GradientKeyword>, and <GradientKeyword>responsive UI</GradientKeyword> for <GradientKeyword>personalized learning experiences</GradientKeyword>.
+      </>
+    ),
+    tags: ["Next.js", "Full-stack", "AI", "SaaS"],
+  },
+  {
+    id: 4,
     src: "/assets/portfolio/shutter-800x450.webp",
     demo: "https://shutterguide.io/",
     title: "ShutterGuide.IO",
@@ -57,10 +69,10 @@ const projects = [
         <GradientKeyword>Photography platform</GradientKeyword> with <GradientTech>Next.js</GradientTech>, <GradientTech>Firebase</GradientTech> auth, and <GradientTech>Stripe</GradientTech> <GradientKeyword>secure payment</GradientKeyword>.
       </>
     ),
-    tags: ["Next.js", "Firebase", "Stripe"],
+    tags: ["Next.js", "API", "Firebase", "Stripe"],
   },
   {
-    id: 4,
+    id: 5,
     src: "/assets/portfolio/ModernApp-800x450.webp",
     demo: "https://bk-inc-modern-app.netlify.app/",
     title: "Modern Business App",
@@ -72,7 +84,7 @@ const projects = [
     tags: ["React", "Tailwind CSS", "UI/UX"],
   },
   {
-    id: 5,
+    id: 6,
     src: "/assets/portfolio/Apple-800x450.webp",
     demo: "https://bkinc525.netlify.app/",
     title: "iPhone Landing Page",
@@ -84,7 +96,7 @@ const projects = [
     tags: ["Three.js", "3D", "Animation"]
   },
   {
-    id: 6,
+    id: 7,
     src: "/assets/portfolio/weather-800x450.webp",
     demo: "https://bkinc-weather.netlify.app/",
     title: "Weather Tracker",
@@ -96,7 +108,7 @@ const projects = [
     tags: ["API", "React", "Real-time"],
   },
   {
-    id: 7,
+    id: 8,
     src: "/assets/portfolio/three-800x450.webp",
     demo: "https://brian-3js-3d.netlify.app/",
     title: "3D Portfolio",
@@ -108,7 +120,7 @@ const projects = [
     tags: ["Three.js", "3D", "Interactive"],
   },
   {
-    id: 8,
+    id: 9,
     src: "/assets/portfolio/bkinctube-800x450.webp",
     demo: "https://bkcodetube.netlify.app/",
     title: "BK Code Tube",
@@ -131,7 +143,7 @@ const ProjectCard = ({ src, demo, title, description, tags, index }) => (
       <div className="absolute inset-0 rounded-2xl p-[1px] bg-gradient-to-br from-gray-600/30 via-gray-500/20 to-gray-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
       {/* Content container - fixed height on tablet/desktop with proper spacing */}
-      <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-900/95 to-black/90 rounded-2xl p-4 md:p-6 backdrop-blur-sm h-full flex flex-col md:h-[560px] lg:h-[580px] overflow-hidden">
+      <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-900/95 to-black/90 rounded-2xl p-4 md:p-6 backdrop-blur-sm h-full flex flex-col md:h-[560px] lg:h-[580px] md:overflow-hidden">
         {/* Image container - fixed dimensions with object-contain */}
         <div className="relative image-container mb-2 w-full overflow-hidden rounded-xl bg-gray-950/50 flex-shrink-0 h-[160px] md:h-[240px] lg:h-[260px]">
           <Image
@@ -145,16 +157,16 @@ const ProjectCard = ({ src, demo, title, description, tags, index }) => (
           />
         </div>
 
-        {/* Description - fixed height to ensure consistency */}
-        <div className="text-gray-300 mb-2 text-xs md:text-sm flex-shrink-0 h-[48px] md:h-[60px] lg:h-[66px] overflow-hidden">
-          <p className="line-clamp-3 leading-tight md:leading-normal">
+        {/* Description - full text on mobile, fixed height on larger screens */}
+        <div className="text-gray-300 mb-2 text-xs md:text-sm flex-shrink-0 md:h-[60px] lg:h-[66px] md:overflow-hidden">
+          <p className="leading-tight md:leading-normal md:line-clamp-3">
             {description}
           </p>
         </div>
 
         {/* Animated skill tags */}
-        <div className="flex flex-wrap gap-1.5 md:gap-2 mb-2 flex-shrink-0 min-h-[26px] md:h-[32px]">
-          {tags.slice(0, 4).map((tag, i) => (
+        <div className="flex flex-wrap gap-1.5 md:gap-2 mb-2 flex-shrink-0">
+          {tags.map((tag, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0, x: -40 }}

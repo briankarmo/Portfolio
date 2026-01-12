@@ -12,6 +12,7 @@ import Contact from "../src/components/Contact";
 import SocialLinks from "../src/components/SocialLinks";
 import GlowingLogo from "../src/components/GlowingLogo";
 import StickyGlowingLogo from "../src/components/StickyGlowingLogo";
+import PWAInstallPrompt from "../src/components/PWAInstallPrompt";
 import { AnimationProvider, pageTransition } from "../src/context/AnimationContext";
 
 export default function HomePage() {
@@ -56,6 +57,7 @@ export default function HomePage() {
         <NavBar />
         <SocialLinks />
         <GlowingLogo />
+        <PWAInstallPrompt />
         <main className="relative">
           <section id="home">
             <motion.div
