@@ -33,7 +33,7 @@ const projects = [
         <GradientKeyword>scale</GradientKeyword> with clean, user-focused <GradientTech>UI/UX</GradientTech>.
       </>
     ),
-    tags: ["MERN", "Full-stack", "API", "AWS"],
+    tags: ["MERN", "Next.js", "Full-stack", "API", "AWS"],
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const projects = [
     title: "Keyo",
     description: (
       <>
-        <GradientKeyword>Scalable SaaS</GradientKeyword> web application built with <GradientTech>Vue.js</GradientTech> and modern backend services, featuring <GradientKeyword>responsive UI</GradientKeyword>, <GradientKeyword>secure API</GradientKeyword> integrations, and streamlined business workflows. Designed for <GradientKeyword>performance</GradientKeyword> and <GradientKeyword>future growth</GradientKeyword>.
+        <GradientKeyword>Scalable</GradientKeyword> <GradientTech>Vue.js</GradientTech> web application built with modern backend services, featuring <GradientKeyword>responsive UI</GradientKeyword>, <GradientKeyword>secure API</GradientKeyword> integrations, and streamlined business workflows. Designed for <GradientKeyword>performance</GradientKeyword> and <GradientKeyword>future growth</GradientKeyword>.
       </>
     ),
     tags: ["Vue.js", "Full-stack", "API", "AWS"],
@@ -54,7 +54,7 @@ const projects = [
     title: "Sheperd",
     description: (
       <>
-        <GradientKeyword>Scalable web app</GradientKeyword> featuring <GradientKeyword>AI content processing</GradientKeyword>, <GradientKeyword>dynamic study tools</GradientKeyword>, and <GradientKeyword>responsive UI</GradientKeyword> for <GradientKeyword>personalized learning experiences</GradientKeyword>.
+        <GradientKeyword>Scalable SaaS web app</GradientKeyword> featuring <GradientKeyword>AI content processing</GradientKeyword>, <GradientKeyword>dynamic study tools</GradientKeyword>, and <GradientKeyword>responsive UI</GradientKeyword> for <GradientKeyword>personalized learning experiences</GradientKeyword>.
       </>
     ),
     tags: ["Next.js", "Full-stack", "AI", "SaaS"],
@@ -66,10 +66,10 @@ const projects = [
     title: "ShutterGuide.IO",
     description: (
       <>
-        <GradientKeyword>Photography platform</GradientKeyword> with <GradientTech>Next.js</GradientTech>, <GradientTech>Firebase</GradientTech> auth, and <GradientTech>Stripe</GradientTech> <GradientKeyword>secure payment</GradientKeyword>.
+        <GradientKeyword>Full-stack photography platform</GradientKeyword> built with <GradientTech>Next.js</GradientTech> featuring <GradientTech>Firebase</GradientTech> <GradientKeyword>authentication</GradientKeyword>, <GradientTech>Stripe</GradientTech> <GradientKeyword>payment processing</GradientKeyword>, <GradientKeyword>user management</GradientKeyword>, and <GradientKeyword>secure transactions</GradientKeyword>. Complete solution for <GradientKeyword>photography services</GradientKeyword> and <GradientKeyword>bookings</GradientKeyword>.
       </>
     ),
-    tags: ["Next.js", "API", "Firebase", "Stripe"],
+    tags: ["Next.js", "Firebase", "Stripe", "Full-stack"],
   },
   {
     id: 5,
@@ -78,10 +78,10 @@ const projects = [
     title: "Modern Business App",
     description: (
       <>
-        <GradientKeyword>Responsive</GradientKeyword> business application showcasing <GradientKeyword>modern</GradientKeyword> <GradientTech>UI/UX</GradientTech> principles.
+        <GradientKeyword>Fully responsive</GradientKeyword> business application built with <GradientTech>React</GradientTech> and <GradientTech>Tailwind CSS</GradientTech>. Features <GradientKeyword>sleek design</GradientKeyword>, <GradientKeyword>smooth animations</GradientKeyword>, <GradientKeyword>mobile-first approach</GradientKeyword>, and <GradientKeyword>modern UI/UX</GradientKeyword> patterns for professional business presentation.
       </>
     ),
-    tags: ["React", "Tailwind CSS", "UI/UX"],
+    tags: ["React", "Tailwind CSS", "Responsive", "UI/UX"],
   },
   {
     id: 6,
@@ -90,10 +90,10 @@ const projects = [
     title: "iPhone Landing Page",
     description: (
       <>
-        <GradientKeyword>Interactive</GradientKeyword> product showcase featuring <GradientTech>Three.js</GradientTech> <GradientKeyword>3D modeling</GradientKeyword>.
+        <GradientKeyword>Premium product showcase</GradientKeyword> featuring <GradientTech>Three.js</GradientTech> <GradientKeyword>3D modeling</GradientKeyword> and <GradientKeyword>interactive animations</GradientKeyword>. Built with <GradientTech>React</GradientTech> and <GradientTech>GSAP</GradientTech> for <GradientKeyword>smooth scrolling</GradientKeyword>, <GradientKeyword>3D product views</GradientKeyword>, and <GradientKeyword>Apple-inspired design</GradientKeyword>.
       </>
     ),
-    tags: ["Three.js", "3D", "Animation"]
+    tags: ["Three.js", "React", "3D", "GSAP", "Animation"]
   },
   {
     id: 7,
@@ -102,10 +102,10 @@ const projects = [
     title: "Weather Tracker",
     description: (
       <>
-        <GradientKeyword>Real-time</GradientKeyword> weather application using <GradientTech>OpenWeatherMap API</GradientTech>.
+        <GradientKeyword>Real-time</GradientKeyword> weather application using <GradientTech>OpenWeatherMap API</GradientTech>. Features <GradientKeyword>city search</GradientKeyword>, <GradientKeyword>current conditions</GradientKeyword>, <GradientKeyword>5-day forecasts</GradientKeyword>, and <GradientKeyword>dynamic weather data</GradientKeyword> with <GradientKeyword>RESTful API</GradientKeyword> integration.
       </>
     ),
-    tags: ["API", "React", "Real-time"],
+    tags: ["OpenWeatherMap API", "React", "Real-time", "REST"],
   },
   {
     id: 8,
@@ -114,10 +114,10 @@ const projects = [
     title: "3D Portfolio",
     description: (
       <>
-        <GradientKeyword>Interactive</GradientKeyword> <GradientKeyword>3D portfolio</GradientKeyword> built with <GradientTech>Three.js</GradientTech>.
+        <GradientKeyword>Immersive 3D portfolio</GradientKeyword> showcasing <GradientKeyword>software development skills</GradientKeyword> through <GradientKeyword>interactive 3D environments</GradientKeyword> built with <GradientTech>Three.js</GradientTech> and <GradientTech>React</GradientTech>. Features <GradientKeyword>3D models</GradientKeyword>, <GradientKeyword>animations</GradientKeyword>, and <GradientKeyword>smooth navigation</GradientKeyword> for an engaging user experience.
       </>
     ),
-    tags: ["Three.js", "3D", "Interactive"],
+    tags: ["Three.js", "React", "3D", "Interactive"],
   },
   {
     id: 9,
@@ -126,10 +126,10 @@ const projects = [
     title: "BK Code Tube",
     description: (
       <>
-        <GradientKeyword>Video platform</GradientKeyword> utilizing <GradientTech>React Router</GradientTech> and <GradientTech>YouTube API</GradientTech> integration.
+        <GradientKeyword>Full-featured video platform</GradientKeyword> built with <GradientTech>React</GradientTech>, featuring <GradientTech>YouTube API</GradientTech> integration for <GradientKeyword>video search</GradientKeyword>, <GradientKeyword>playback</GradientKeyword>, and <GradientKeyword>dynamic content</GradientKeyword>. Includes <GradientKeyword>routing</GradientKeyword>, <GradientKeyword>responsive design</GradientKeyword>, and <GradientKeyword>smooth navigation</GradientKeyword>.
       </>
     ),
-    tags: ["React Router", "YouTube API", "Video"],
+    tags: ["React", "YouTube API", "React Router", "REST API"],
   },
 ];
 
